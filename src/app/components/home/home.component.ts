@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EpisodeListComponent } from 'src/app/episode-list/episode-list.component';
 
 @Component({
   selector: 'app-home',
