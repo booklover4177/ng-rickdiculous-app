@@ -34,7 +34,7 @@ describe('UrlServiceService', () => {
   it('should get all episodes', ()=>{
 
     service.getAllEpisodeData().subscribe(data => {
-      expect(data.results).toEqual(EPISODEDATA);});
+      expect(data.results).toEqual(EPISODEDATA.results);});
 
 
 
