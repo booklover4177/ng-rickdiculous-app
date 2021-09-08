@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Episode } from '../../episode';
+import { Episodes } from '../../episode';
 import { EpisodeData } from '../../episode';
 import { UrlServiceService } from '../../url-service.service';
 import { HttpClient } from '@angular/common/http';
@@ -12,7 +12,7 @@ import { PageIndexService } from 'src/app/page-index.service';
 })
 export class EpisodeListComponent implements OnInit {
   // episodes: Episode[]=[new Episode(0, "test", "1/1/00", "test ep", ["Rick"], "testurl", "testcreated")];
-  episodes: Episode;
+  episodes: Episodes;
   //selectedEpisode: number = -1;
 
   constructor(
@@ -23,7 +23,7 @@ export class EpisodeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.urlService
-      .getAllEpisodeData()
+      .getAllEpisodeData(1)
       .subscribe((data) => (this.episodes = data));
     // this.dogService.alldogs().subscribe(data => this.dogs = data);
   }

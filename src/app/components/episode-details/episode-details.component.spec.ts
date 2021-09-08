@@ -22,4 +22,8 @@ describe('EpisodeDetailsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should get characters', () => {
+    
+  })
 });

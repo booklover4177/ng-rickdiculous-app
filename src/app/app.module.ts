@@ -6,13 +6,17 @@ import { HomeComponent } from './components/home/home.component';
 import { EpisodeListComponent } from './components/episode-list/episode-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EpisodeDetailsComponent } from './components/episode-details/episode-details.component';
+import { EpisodePageComponent } from './components/episode-page/episode-page.component';
+import { CharacterListComponent } from './components/character-list/character-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     EpisodeListComponent,
-    EpisodeDetailsComponent
+    EpisodeDetailsComponent,
+    EpisodePageComponent,
+    CharacterListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { Episodes } from '../../episode';
+import { EpisodeData } from '../../episode';
 import { EpisodeListComponent } from './episode-list.component';
 import { HttpClient } from '@angular/common/http';
 

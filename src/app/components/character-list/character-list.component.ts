@@ -8,11 +8,11 @@ import { Characters } from 'src/app/characters';
 import { CharacterData } from 'src/app/characters';
 
 @Component({
-  selector: 'app-episode-details',
-  templateUrl: './episode-details.component.html',
-  styleUrls: ['./episode-details.component.css'],
+  selector: 'app-character-list',
+  templateUrl: './character-list.component.html',
+  styleUrls: ['./character-list.component.css'],
 })
-export class EpisodeDetailsComponent implements OnInit {
+export class CharacterListComponent implements OnInit {
   index: number = -1;
   episode: EpisodeData;
   characterData: CharacterData[];
@@ -27,19 +27,7 @@ export class EpisodeDetailsComponent implements OnInit {
     this.pageIndexService.getIndex().subscribe((data) => (this.index = data));
 
     this.urlService
-      .getOneEpisodeData(this.index)
-      .subscribe((data) => (this.episode = data));
+      .getSpecificCharacters(this.index)
+      .subscribe((data) => (this.characterData = data));
   }
-
-  // GetCharacterIds() {
-  //   this.characterIds = [];
-
-  //   for (let i = 0; i < this.episode.characters.length; i++) {
-  //     let newArray = this.episode.characters[i].split(
-  //       'https://rickandmortyapi.com/api/character/'
-  //     );
-  //     let id = parseInt(newArray[0]);
-  //     this.characterIds.push(id);
-  //   }
-  // }
 }

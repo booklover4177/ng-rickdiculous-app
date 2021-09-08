@@ -1,2 +1,12 @@
 <p>episode-details works!</p>
-<div>index: {{ index }}</div>
+<!-- <div>index: {{ index }}</div> -->
+
+<div>Episode {{ episode.id }}: {{ episode.name }}</div>
+<div>Air date: {{ episode.air_date }}</div>
+<div>Season/Ep: {{ episode.episode }}</div>
+<!-- Characters:
+<div *ngFor="let character of episode.characters">
+  {{ character }}
+</div> -->
+<!-- <div>{{ episode.url }}</div> -->
+<div>Created: {{ episode.created }}</div>

@@ -1,4 +1,4 @@
-export interface Episode {
+export interface Episodes {
   info: {
     count: number;
     pages: number;
