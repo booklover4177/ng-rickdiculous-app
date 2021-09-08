@@ -1,0 +1,13 @@
+<div *ngFor="let results of episodes.results; index as i">
+  <div>Episode {{ results.id }}: {{ results.name }}</div>
+  <!-- <div>{{ results.url }}</div> -->
+  <a routerLink="app-episode-details" (click)="showEpisode(i)">Go to page</a>
+  <br />
+  <!-- <div>{{ results.id }}</div>
+  <div>{{ results.name }}</div>
+  <div>{{ results.air_date }}</div>
+  <div>{{ results.episode }}</div>
+  <div>{{ results.characters }}</div>
+  <div>{{ results.url }}</div>
+  <div>{{ results.created }}</div> -->
+</div>

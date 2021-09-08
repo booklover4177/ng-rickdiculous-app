@@ -1,22 +1,12 @@
 export interface Episode {
-
-  info:{
+  info: {
     count: number;
     pages: number;
     next: string;
     prev: string;
+  };
 
-  }
-  results:{
-    id: number;
-    name: string;
-    air_date: string;
-    episode: string;
-    characters: string[];
-    url: string;
-    created: string;
-  }
-
+  results: EpisodeData[];
 
   // constructor(id: number, name:string, air_date:string, episode: string, charaters: string[], url: string, created: string){
   //   this.id=id;
@@ -29,4 +19,12 @@ export interface Episode {
   // }
 }
 
-
+export interface EpisodeData {
+  id: number;
+  name: string;
+  air_date: string;
+  episode: string;
+  characters: string[];
+  url: string;
+  created: string;
+}
