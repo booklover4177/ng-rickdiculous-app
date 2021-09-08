@@ -30,7 +30,7 @@ describe('UrlServiceService', () => {
   it('should send get request to right webpage', () => {
     service.getAllEpisodeData(1).subscribe(); // start request
 
-    httpTestController.expectOne('https://rickandmortyapi.com/api/episode');
+    httpTestController.expectOne('https://rickandmortyapi.com/api/episode?page/1');
     httpTestController.verify();
   });
 

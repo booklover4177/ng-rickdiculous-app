@@ -4,6 +4,7 @@ import { EpisodeData } from '../../episode';
 import { UrlServiceService } from '../../url-service.service';
 import { HttpClient } from '@angular/common/http';
 import { PageIndexService } from 'src/app/page-index.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-episode-list',
@@ -15,10 +16,14 @@ export class EpisodeListComponent implements OnInit {
   episodes: Episodes;
   //selectedEpisode: number = -1;
 
+  episodeListPg: number=1;
+
   constructor(
     private urlService: UrlServiceService,
     private http: HttpClient,
-    private pageIndexService: PageIndexService
+    private pageIndexService: PageIndexService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,4 +39,6 @@ export class EpisodeListComponent implements OnInit {
 
     this.pageIndexService.changeIndex(i + 1);
   }
+
+
 }
